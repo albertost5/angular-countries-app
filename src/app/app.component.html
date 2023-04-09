@@ -1,5 +1,23 @@
-<app-capital></app-capital>
-<app-country></app-country>
-<app-region></app-region>
-<app-single-country></app-single-country>
-<app-sidebar></app-sidebar>
+<div class="row container mt-4">
+
+  <div class="col-3">
+    <h2>Searches:</h2>
+    <hr />
+    <ul class="list-group">
+      <li class="list-group-item" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true  }">
+        Search country
+      </li>
+      <li class="list-group-item" routerLink="region" routerLinkActive="active">
+        Search region
+      </li>
+      <li class="list-group-item" routerLink="capital" routerLinkActive="active">
+        Search capital
+      </li>
+    </ul>
+  </div>
+
+  <div class="col">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
